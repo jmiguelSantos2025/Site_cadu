@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>feliz_aniversario_cadu.js</title>
+  <meta name="description" content="Uma página especial de aniversário para o Cadu." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="dot dot--red"></span>
+      <span class="dot dot--yellow"></span>
+      <span class="dot dot--green"></span>
+      <span class="topbar__path">~/cadu/aniversario</span>
+    </div>
+    <nav class="topbar__nav">
+      <a href="#terminal">terminal</a>
+      <a href="#changelog">fases</a>
+      <a href="#galeria">galeria</a>
+      <a href="#mensagens">mensagens</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO: terminal que "digita" a mensagem de aniversário -->
+    <section id="terminal" class="hero">
+      <div class="hero__text">
+        <p class="hero__eyebrow">$ Cadu</p>
+        <h1 class="hero__title">
+          Cadu completou<br />
+          mais um <span class="hero__title-accent">aniversario</span>.
+        </h1>
+        <p class="hero__subtitle">
+          Deus seja louvado pela vida meu amigo, que o Senhor lhe abençoe muito e que você continue sendo esse cara top demais.
+        </p>
+      </div>
+
+      <div class="terminal-window" role="img" aria-label="Terminal exibindo mensagem de aniversário para o Cadu">
+        <div class="terminal-window__bar">
+          <div class="terminal-window__dots">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+          </div>
+          <span class="terminal-window__title">bash — 80x24</span>
+        </div>
+        <div class="terminal-window__body">
+          <pre id="terminal-output" class="terminal-output"></pre>
+          <span class="terminal-cursor" aria-hidden="true">&#9608;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD ESTILO "RELEASE NOTES" -->
+    <section id="changelog" class="changelog">
+      <div class="changelog__header">
+        <p class="section-kicker">Nova Fase</p>
+        <h2>Cadu em 2026</h2>
+      </div>
+
+      <div class="changelog__grid">
+        <article class="release-card">
+          <div class="release-card__tag release-card__tag--new">Serviço</div>
+          <h3>Servo de Cristo</h3>
+          <p>Que Deus abençoe muito sua vida meu amigo e que você seja sempre essa pessoa sempre serva e temente a Deus.</p>
+        </article>
+
+        <article class="release-card">
+          <div class="release-card__tag release-card__tag--fix">Fé</div>
+          <h3>Fé em Deus</h3>
+          <p>Que nesse novo de vida você continue mantendo essa fé em Deus que você tem e confiando nos planos de Deus em sua vida.</p>
+        </article>
+
+        <article class="release-card">
+          <div class="release-card__tag release-card__tag--wip">Amigo</div>
+          <h3>Amigo de PV 17:17</h3>
+          <p>Que você continue sendo essa inspiração de alegria e temor a Deus que você é meu amigo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIA DE FOTOS -->
+    <section id="galeria" class="gallery">
+      <div class="gallery__header">
+        <p class="section-kicker">galeria</p>
+        <h2>Caduzeira em 4k</h2>
+      </div>
+
+      <div class="gallery__grid">
+        <!--
+          COMO ADICIONAR AS FOTOS DO CADU:
+          1. Coloque os arquivos de imagem dentro da pasta "images/" (mesma pasta deste index.html).
+          2. Use os nomes de arquivo sugeridos abaixo (ou troque o "src" pelo nome real do arquivo).
+          3. Recomendo fotos na proporção quadrada ou 4:5 para não distorcer o layout.
+        -->
+        <figure class="gallery__item gallery__item--big">
+          <img src="images/foto1.jpeg" alt="Foto principal do Cadu" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/foto2.jpeg" alt="Foto do Cadu" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/foto5.jpeg" alt="Foto do Cadu" loading="lazy" />
+        </figure>
+        <figure class="gallery__item">
+          <img src="images/foto4.jpeg" alt="Foto do Cadu" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- MENSAGENS -->
+    <section id="mensagens" class="messages">
+      <div class="messages__header">
+        <p class="section-kicker">mensagens</p>
+        <h2>console.log("feliz aniversário meu amigo!")</h2>
+      </div>
+
+      <div class="messages__grid">
+        <blockquote class="message-card">
+          <p>"O amigo ama em todos os momentos, mas na adversidade nasce um irmão" - 
+Provérbios 17:17</p>
+        </blockquote>
+        <blockquote class="message-card">
+          <p>"Meu amigo, que você seja sempre esse cara incrivel dms que você é, umas das melhores amizades que Deus colocou em minha vida e que mais me inspiram. Tu é o cara mn" - João Miguel</p>
+        </blockquote>
+        <blockquote class="message-card">
+          <p>"Quem tem muitos amigos pode chegar à ruína, mas existe amigo mais chegado que um irmão" - Provérbios 18:24</p>
+        </blockquote>
+      </div>
+
+      <div class="celebrate">
+        <button id="celebrate-btn" class="celebrate__button">
+          <span>Parabéns</span> Cadu!
+        </button>
+        <p class="celebrate__hint">clique para comemorar</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Feliz aniversário meu amigo Cadu!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
